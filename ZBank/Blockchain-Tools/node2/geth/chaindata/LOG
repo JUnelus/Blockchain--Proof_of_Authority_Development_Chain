@@ -1,0 +1,77 @@
+=============== Jul 22, 2021 (EDT) ===============
+22:01:21.166288 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+22:01:21.171272 db@open opening
+22:01:21.172270 version@stat F·[] S·0B[] Sc·[]
+22:01:21.173907 db@janitor F·2 G·0
+22:01:21.173907 db@open done T·2.6348ms
+22:01:21.183945 db@close closing
+22:01:21.184771 db@close done T·825.1µs
+=============== Jul 22, 2021 (EDT) ===============
+22:03:12.381500 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+22:03:12.383494 version@stat F·[] S·0B[] Sc·[]
+22:03:12.383494 db@open opening
+22:03:12.383494 journal@recovery F·1
+22:03:12.391479 journal@recovery recovering @1
+22:03:12.394474 memdb@flush created L0@2 N·623 S·50KiB "\x02d\xfc..\x19Ba,v431":"\xfe\x88\xcf..H\xef\xcc,v364"
+22:03:12.401447 version@stat F·[1] S·50KiB[50KiB] Sc·[0.25]
+22:03:12.409427 db@janitor F·3 G·0
+22:03:12.409427 db@open done T·25.9327ms
+22:26:07.265669 db@close closing
+22:26:07.265669 db@close done T·0s
+=============== Jul 24, 2021 (EDT) ===============
+11:01:26.253667 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+11:01:26.255661 version@stat F·[1] S·50KiB[50KiB] Sc·[0.25]
+11:01:26.255661 db@open opening
+11:01:26.255661 journal@recovery F·1
+11:01:26.261645 journal@recovery recovering @3
+11:01:26.270698 memdb@flush created L0@5 N·1981 S·106KiB "\x00\x92\x91..H\r\x0f,v2600":"\xf8f2..&\xfbe,v2585"
+11:01:26.280641 version@stat F·[2] S·157KiB[157KiB] Sc·[0.50]
+11:01:26.286628 db@janitor F·4 G·0
+11:01:26.286628 db@open done T·30.9665ms
+11:05:23.840286 db@close closing
+11:05:23.840286 db@close done T·0s
+=============== Jul 24, 2021 (EDT) ===============
+11:22:14.395309 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+11:22:14.396307 version@stat F·[2] S·157KiB[157KiB] Sc·[0.50]
+11:22:14.396307 db@open opening
+11:22:14.396307 journal@recovery F·1
+11:22:14.402291 journal@recovery recovering @6
+11:22:14.408182 memdb@flush created L0@8 N·973 S·51KiB "'\x1a\xc2..\x8a\xa0v,v3574":"\xef\x87\x1a..\x8aN\xdf,v3579"
+11:22:14.414175 version@stat F·[3] S·209KiB[209KiB] Sc·[0.75]
+11:22:14.427966 db@janitor F·5 G·0
+11:22:14.427966 db@open done T·31.6596ms
+14:00:50.058556 db@close closing
+14:00:50.061548 db@close done T·2.9915ms
+=============== Jul 25, 2021 (EDT) ===============
+13:20:35.208594 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+13:20:35.210589 version@stat F·[3] S·209KiB[209KiB] Sc·[0.75]
+13:20:35.210589 db@open opening
+13:20:35.210589 journal@recovery F·1
+13:20:35.223554 journal@recovery recovering @9
+13:20:35.249484 memdb@flush created L0@11 N·10157 S·520KiB "\x17Ӿ..+\xaa=,v13727":"\xea\xa6)..\xe0;\xfb,v13732"
+13:20:35.255468 version@stat F·[4] S·730KiB[730KiB] Sc·[1.00]
+13:20:35.261453 db@janitor F·6 G·0
+13:20:35.261453 db@open done T·50.8638ms
+13:20:35.261453 table@compaction L0·4 -> L1·0 S·730KiB Q·13738
+13:20:35.278406 table@build created L1@14 N·9360 S·552KiB "\x00\x92\x91..H\r\x0f,v2600":"\xfe\x88\xcf..H\xef\xcc,v364"
+13:20:35.278406 version@stat F·[0 1] S·552KiB[0B 552KiB] Sc·[0.00 0.01]
+13:20:35.279404 table@compaction committed F-3 S-177KiB Ke·0 D·4374 T·17.9512ms
+13:20:35.279404 table@remove removed @8
+13:20:35.280401 table@remove removed @5
+13:20:35.280401 table@remove removed @2
+22:39:27.976457 db@close closing
+22:39:27.978452 db@close done T·1.9948ms
+=============== Jul 26, 2021 (EDT) ===============
+21:52:14.152190 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:52:14.155181 version@stat F·[0 1] S·552KiB[0B 552KiB] Sc·[0.00 0.01]
+21:52:14.155181 db@open opening
+21:52:14.155181 journal@recovery F·1
+21:52:14.163165 journal@recovery recovering @12
+21:52:14.199064 memdb@flush created L0@15 N·12848 S·658KiB "\x12\xf8b..\xc1\xf5\x03,v26579":"\xe2\xf2*..z\x14\xdc,v26576"
+21:52:14.207042 version@stat F·[1 1] S·1MiB[658KiB 552KiB] Sc·[0.25 0.01]
+21:52:14.225503 db@janitor F·5 G·1
+21:52:14.225503 db@janitor removing table-11
+21:52:14.225503 db@open done T·70.3221ms
+=============== Jul 27, 2021 (EDT) ===============
+23:25:58.389081 db@close closing
+23:25:58.394965 db@close done T·5.8836ms

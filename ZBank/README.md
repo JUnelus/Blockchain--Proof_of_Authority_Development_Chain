@@ -18,13 +18,13 @@ Recall that by **terminal window**, we refer to the `Terminal` in Mac, or `Git B
 
 * This should show the following prompt:
 
- ![puppeth](Images/puppeth.png)
+ ![puppeth](Screenshots/puppeth.png)
 
 * Type in a name for your network, like "puppernet" and hit enter to move forward in the wizard.
 
 * Type `2` to pick the `Configure new genesis` option, then `1` to `Create new genesis from scratch`:
 
- ![genesis](Images/puppeth-genesis.png)
+ ![genesis](Screenshots/puppeth-genesis.png)
 
 Now you have the option to pick a consensus engine (algorithm) to use.
 
@@ -39,13 +39,13 @@ You will be asked to enter a pre-fund account.
 * Continue with the default option for the prompt that asks `Should the precompile-addresses (0x1 .. 0xff) be pre-funded with 1 wei?` by hitting enter again,
  until you reach the `Chain ID` prompt.
 
- ![prefunding accounts](Images/puppeth-prefund.png)
+ ![prefunding accounts](Screenshots/puppeth-prefund.png)
 
 * Come up with a number to use as a chain ID (e.g. `333`) type it, then hit enter.
 
 You should see a success message and redirected to the original prompt:
 
-![success](Images/puppeth-success.png)
+![success](Screenshots/puppeth-success.png)
 
 Awesome! Your genesis configuration is stored in your local home directory.
 
@@ -66,7 +66,7 @@ First, export your genesis configuration into a `yournetworkname.json` file as f
 
 * Then, type `2` again to choose the `Export genesis configurations` option, and continue with the default (current) directory by hitting enter:
 
- ![export genesis puppeth](Images/puppeth-export.png)
+ ![export genesis puppeth](Screenshots/puppeth-export.png)
 
 * This will export several `yournetworkname.json` files -- you only need the first one without `aleth`, `parity`, or `harmony` suffixes.
 
@@ -82,7 +82,7 @@ Now, we need to create at least two nodes to build the chain from the genesis bl
 
 You should see a success message similar to this one:
 
-![geth new account](Images/geth-account-new.png)
+![geth new account](Screenshots/geth-account-new.png)
 
 * Create a new text file for notes, and copy the node's address into the file and label it `Node 1 Key`.
 
@@ -114,7 +114,7 @@ Now, it's time to initialize and tell the nodes to use your genesis block!
 
 You should see this success message:
 
-![geth init](Images/geth-init.png)
+![geth init](Screenshots/geth-init.png)
 
 * Since you only initialize your nodes once, you don't need to copy anything into your notes here.
 
@@ -128,7 +128,7 @@ Get excited, because your blockchain is only a couple steps away from being brou
 
 Your final directory structure should look something like:
 
-![directory tree](Images/geth-tree.png)
+![directory tree](Screenshots/geth-tree.png)
 
 # Bringing your blockchain to life
 
@@ -156,7 +156,7 @@ In your notes text file, make sure to keep track of **every** command you run in
 
 You should see the node `Committing new mining work`:
 
-![node mining](Images/mining.png)
+![node mining](Screenshots/mining.png)
 
 * Copy this command into your notes and label it `Start Node 1`.
 
@@ -164,7 +164,7 @@ Now you will launch the second node and configure it to let us talk to the chain
 
 * Scroll up in the terminal window where `node1` is running, and copy the entire `enode://` address (including the last `@address:port` segment) of the first node located in the `Started P2P Networking` line:
 
- ![enodeid](Images/enodeid.png)
+ ![enodeid](Screenshots/enodeid.png)
 
 * We will need this address to tell the second node where to find the first node.
 
@@ -184,7 +184,7 @@ Now you will launch the second node and configure it to let us talk to the chain
 
 * The output of the second node should show information about `Importing block segments` and synchronization:
 
- ![node sync](Images/node-sync.png)
+ ![node sync](Screenshots/node-sync.png)
 
 * Copy this command into your notes and call it `Start Node 2`.
 
@@ -214,7 +214,7 @@ First, you will need to get the private key of your pre-funded address and keep 
 
 * Open up MyCrypto to get the private key of the ETH address you use to pre-fund your chain. Be sure the `Kovan` network is selected.
 
- ![Verify Kovan network](Images/verify-kovan.gif)
+ ![Verify Kovan network](Screenshots/verify-kovan.gif)
 
 * Unlock your wallet using your mnemonic phrase and choose the address you want to inspect.
 
@@ -222,19 +222,19 @@ First, you will need to get the private key of your pre-funded address and keep 
 
 * Click on the eye icon next to the `Private Key` field, and copy and paste the private key of the wallet. Keep this handy, as you will use it in a bit.
 
- ![Get private key](Images/get-private-key.gif)
+ ![Get private key](Screenshots/get-private-key.gif)
 
 Now you are going to connect MyCrypto with the blockchain you created. Follow the next steps.
 
 * Open up MyCrypto, then click `Change Network` at the bottom left:
 
- ![change network](Images/change-network.png)
+ ![change network](Screenshots/change-network.png)
 
 * Click "Add Custom Node", then add the custom network information that you set in the genesis.
 
 * Make sure that you scroll down to choose `Custom` in the "Network" column to reveal more options like `Chain ID`:
 
- ![custom network](Images/custom-network.png)
+ ![custom network](Screenshots/custom-network.png)
 
 * The chain ID must match what you came up with earlier.
 
@@ -246,41 +246,41 @@ Now that you are connected to your blockchain, you will need to load a private k
 
 * If you are logged in to another wallet, you'll need to click `Change Wallet` on the top right, but make sure you are connected to your custom network:
 
-![Switch Wallet](Images/mycrypto-switch-wallet.png)
+![Switch Wallet](Screenshots/mycrypto-switch-wallet.png)
 
 * On the left pane menu, click on "View & Send".
 
 * Next, click on the "Private Key" option to continue.
 
- ![Open wallet step 1](Images/open-wallet-1.png)
+ ![Open wallet step 1](Screenshots/open-wallet-1.png)
 
 * A new window will pop-up, paste the private key of the pre-fund wallet and click on the "Unlock" button to continue.
 
- ![Open wallet step 2](Images/open-wallet-2.png)
+ ![Open wallet step 2](Screenshots/open-wallet-2.png)
 
 * Looks like we're filthy rich! This is the balance that was pre-funded for this account in the genesis configuration; however, these millions of ETH tokens are just for testing purposes.
 
- ![prefunded account](Images/prefunded-account.png)
+ ![prefunded account](Screenshots/prefunded-account.png)
 
 Now we're going to send a transaction to ourselves to test it out. Follow the next steps.
 
 * Copy the pre-fund address into the "To Address" field, then fill in an arbitrary amount of ETH:
 
- ![transaction send](Images/transaction-send.png)
+ ![transaction send](Screenshots/transaction-send.png)
 
 * Confirm the transaction by clicking "Send Transaction", and the "Send" button in the pop-up window.
 
- ![Send transaction](Images/send-transaction.gif)
+ ![Send transaction](Screenshots/send-transaction.gif)
 
 * Click the `Check TX Status` when the green message pops up, confirm the logout:
 
- ![check tx](Images/check-tx-status.png)
+ ![check tx](Screenshots/check-tx-status.png)
 
 * You should see the transaction go from `Pending` to `Successful` in around the same block time you set in the genesis.
 
 * You can click the `Check TX Status` button to update the status.
 
- ![successful transaction](Images/transaction-status.png)
+ ![successful transaction](Screenshots/transaction-status.png)
 
 Congratulations! That was the first transaction sent on this blockchain network!
 
